@@ -1,0 +1,55 @@
+Name: Eunsung Kim, 251275156
+
+Part 1: Files
+    1. The command "echo *" can be used as a replacement of ls. This command works 
+    because echo is used to print out the input command after the echo in the terminal,
+    but when it is used with the asterisk (*), it is used as a wildcard and allows 
+    echo to display all the directories and files in the current directory.
+
+    2. rm -i prompts you before a deleting a file or directory. 
+    rm -f ensures to not be prompted.
+    If they are used simultaneously, the one that comes later, takes the precedence.
+
+    3. rename command is specifically used for renaming files, but it can rename multiple
+    files at once. 
+    mv command's major function is to use is to move files and directories' location, 
+    but it also can be used to rename files and back them up.
+
+    4. In this context, ELF stands for Executable and Linkable Format, which is 
+    a standard file format used by executable files, for storing binaries, libraries,
+    and core dumps on disks. 
+
+    5. ls -l command displays the file size of 0 because it checks the contnent of the
+    file, whereas du command estimates file space usage, which is the file's actual 
+    disk space, so it shows file size of 1.
+
+Part 2: Directories
+    1. mkdir -p grandparent/parent/child
+
+    2. To create a directory with a space in it, put the name of the directory with 
+    spaces inside of quotation marks. For example:
+        mkdir "a a"
+    This is the same for removing:
+        remdir "a a"
+
+    3. mkdir -m 500 filename
+
+    4. cd -
+
+    5. dirs -v to check the levels of stack and determine which folder is the 6th one.
+    pushd +6 to cd to the 6th folder in the stack.
+
+Part 3: Permissions
+    1. chmod -v, which is the flag for verbose, should be added to chmod to print out 
+    the modifications being made. 
+
+    2. chown --reference=file1 file2
+
+    3. stat -c "%A %U %G" filename
+
+    4. Set file permission: chmod g=w filename
+    Then, set the directory of the file permission for group to only executable: 
+    chmod g=x directoryname
+
+    5. The command without u/g/o/a are applied to all user, group and others.
+    For example, chmod +x <filename> is the same as chmod a+x <filename>.
